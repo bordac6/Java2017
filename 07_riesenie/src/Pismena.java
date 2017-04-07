@@ -10,18 +10,21 @@ public class Pismena {
 	public static void main(String[] args) {
 	  try {	
 		BufferedReader in = new BufferedReader(new FileReader("PISMENA.TXT"));
-		BufferedWriter out = new BufferedWriter(new FileWriter("KOLKO.TXT"));
+		//BufferedWriter out = new BufferedWriter(new FileWriter("KOLKO.TXT"));
+		PrintStream out = new PrintStream("KOLKO.TXT");
 		for(;;) {
 			String line = in.readLine();
 			if (line == null) break;
-			out.write(line);
-			out.newLine();
+			out.println(line);
+			//out.write(line);
+			//out.newLine();
 			int count = 0;
 			for(int i=0; i<line.length(); i++)
 			  if (Character.isLowerCase(line.charAt(i)))
 				  count++;
-			out.write(""+count);
-			out.newLine();
+			//out.write(""+count);
+			//out.newLine();
+			out.println(""+count);
 		}
 		in.close();
 		out.close();
