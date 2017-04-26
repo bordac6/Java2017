@@ -4,14 +4,12 @@ public class ArrayListNotSynchronized extends Thread {
 	ArrayList<Integer> al = new ArrayList<Integer>();
 	//List al = Collections.synchronizedList(new ArrayList());
 	int counter = 0;
-	//not 
-	//synchronized 
+	//not synchronized 
 	public void add() {
 		//System.out.println("add "+counter);
 		al.add(counter); counter++;
 	}
-	//not 
-	//synchronized
+	//not synchronized
 	public void delete() {
 		//System.out.println("index "+(counter-1));
 		if (al.indexOf(counter-1) != -1) {

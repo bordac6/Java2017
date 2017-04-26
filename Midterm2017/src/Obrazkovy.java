@@ -48,8 +48,6 @@ public class Obrazkovy {
 		{ // kod 9
 			//MySet ms = new HashSet<String>();  // cannot convert HashSet to MySet ...S
 			HashSet<String> hs = new MySet();
-
-
 		}
 		{ // kod 10
 			// MySet[] pole5 = new HashSet<String>[5];  // cannot create generic array... S

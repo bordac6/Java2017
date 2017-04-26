@@ -54,7 +54,7 @@ public class ManyBallsAnimationTimerFx  extends Application {
 class BallPane2 extends Pane {
 	private int w = 450, h = 450;
 	private ArrayList<IdealBall2> balls = new ArrayList<IdealBall2>();
-	//final int SIZE = 2;
+	///final int SIZE = 2;
 	//final int SIZE = 100;
 	//final int SIZE = 1000;
 	final int SIZE = 10000;

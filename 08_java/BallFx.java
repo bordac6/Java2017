@@ -23,7 +23,7 @@ public class BallFx extends Application {
 	BallPane balls = new BallPane();
 		
 		// Create a handler for animation
-
+	/*
 	EventHandler<ActionEvent> eventHandler1 = new EventHandler<ActionEvent>() {
 		@Override
 		public void handle(ActionEvent e) {
@@ -32,7 +32,7 @@ public class BallFx extends Application {
 		}
 	}; 
 	Timeline animation = new Timeline(new KeyFrame(Duration.millis(10), eventHandler1));
-	
+	*/
 	/*
 		EventHandler<ActionEvent> eventHandler = e -> {
 			balls.update();
@@ -40,13 +40,13 @@ public class BallFx extends Application {
 		};
 		Timeline animation = new Timeline(new KeyFrame(Duration.millis(10), eventHandler));
 */
-		/*
+		
 		Timeline animation = new Timeline(new KeyFrame(Duration.millis(10), 
-			e -> {
+			_ -> {
 				balls.update();
 				balls.paintBallPane();
 			}));
-			*/
+			
 		animation.setCycleCount(Timeline.INDEFINITE);
 		animation.play(); // Start animation
 		

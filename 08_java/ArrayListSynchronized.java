@@ -5,14 +5,12 @@ public class ArrayListSynchronized extends Thread {
 	//List al = new ArrayList();
 	int counter = 0;
 	
-	// 
 	synchronized 
 	public void add() {
 		//System.out.println("add "+counter);
 		al.add(counter); counter++;
 	}
 	
-	//	
 	synchronized 
 	public void delete() {
 		if (al.indexOf(counter-1) != -1) {

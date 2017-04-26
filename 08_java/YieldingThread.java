@@ -14,7 +14,7 @@ public class YieldingThread extends Thread {
     	  for(long j=0; j<5000000000L; j++) {	// kým toto zráta
 							// zapotí sa ...
 	         double gg = 0-Math.PI+j+j-j+Math.PI;
-         	 //yield();
+         	 yield();
 	         if (j % 100000000L == 0) {
 	         	 //yield();
 	         }
