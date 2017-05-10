@@ -1,5 +1,7 @@
 package application;
 
+import java.io.Serializable;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -10,12 +12,13 @@ import javafx.stage.Stage;
 
 public class PiskvorkyGridButton extends Application {
 	final static int SIZE = 10;
-	PiskyState ps = new PiskyState();
+	//final static int SIZE = 20;
+	PiskyState ps = new PiskyState(SIZE);
 
 	@Override
 	public void start(Stage primaryStage) {
 		Scene scene = new Scene(new Piskyground());
-		primaryStage.setTitle("Pišky cez Button");
+		primaryStage.setTitle("Pišky cez GridPane/Button");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
@@ -26,11 +29,9 @@ public class PiskvorkyGridButton extends Application {
 
 	class Piskyground extends GridPane {
 		public Piskyground() {
-			//setVgap(10);
-			//setHgap(10);
 			for (int i = 0; i < PiskvorkyGridButton.SIZE; i++)
 				for (int j = 0; j < PiskvorkyGridButton.SIZE; j++)
-					add(new PiskyCell(i, j), j, i);
+					add(new PiskyCell(i, j), i, j);
 		}
 	}
 
@@ -46,7 +47,8 @@ public class PiskvorkyGridButton extends Application {
 		public PiskyCell(int i, int j) {
 			this.i = i;
 			this.j = j;
-			setPrefSize(40, 40);
+			setPrefSize(50, 50);
+			//setPrefSize(40, 40);
 			setOnAction(event -> {
 				if (ps.playground[i][j] != 0)
 					return;
